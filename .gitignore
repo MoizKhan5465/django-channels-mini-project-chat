@@ -1,0 +1,38 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+myenv/
+env/
+venv/
+
+# Django
+db.sqlite3
+*.log
+media/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE / Editor
+.vscode/
+.idea/
+
+# Environment variables / secrets
+.env
+secrets.yml
+secrets.json
+
+# Certificates, keys
+*.pem
+*.key
+
+# Byte-compiled / distribution
+dist/
+build/
+
+# Node modules (if any)
+node_modules/
