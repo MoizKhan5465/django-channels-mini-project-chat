@@ -1,0 +1,72 @@
+<!-- chat/templates/chat/lobby.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chat Lobby</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #f0f2f5;
+        }
+        .box {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+            text-align: center;
+            width: 320px;
+        }
+        h2 { color: #075e54; margin-bottom: 20px; }
+        input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 15px;
+            margin-bottom: 12px;
+        }
+        button {
+            width: 100%;
+            padding: 12px;
+            background: #25D366;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 15px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h2>💬 Django Chat</h2>
+
+        <input type="text" id="roomInput" placeholder="Room name (e.g. friends)" />
+        <button onclick="joinRoom()">Join Room</button>
+    </div>
+
+    <script>
+        function joinRoom() {
+            const room = document.getElementById('roomInput').value.trim();
+
+            if (room === '') {
+                alert('Enter a room name!');
+                return;
+            }
+
+            // Redirect to the chat room page
+            // e.g. /chat/friends/
+            window.location.href = `/chat/${room}/`;
+        }
+
+        // Join on Enter key
+        document.getElementById('roomInput').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') joinRoom();
+        });
+    </script>
+</body>
+</html>

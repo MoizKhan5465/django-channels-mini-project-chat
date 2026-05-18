@@ -89,6 +89,7 @@ If `git push` asks for credentials or fails, follow GitHub hints to authenticate
 ---
 
 If you want, I can:
+
 - Normalize room names automatically (replace spaces with `-`) and update the client/consumer accordingly
 - Add more setup examples (systemd, Windows service) or a Docker Compose file
 - Attempt the git commit & push from this environment now
